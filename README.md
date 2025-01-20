@@ -3,6 +3,28 @@ Design and develop a random color generator web application using React. This ap
 - [ ] A button with the exact text `Generate` will cause a new color to be generated when it is clicked
 - [ ] Once a color is generated, update the background color of a div which contains the exact text `Generated Color: <background color hex code>` (the background color and the hex code must match)
 
+# Todo's
+
+Setup Project:
+
+- [ ] Create a new React app using npx create-react-app.
+- [ ] Set up the project structure (e.g., src/components for components).
+      Create Components:
+- [ ] Implement App to manage state.
+- [ ] Build GenerateButton to trigger the color generation.
+- [ ] Build ColorDisplay to show the hex code and update its background.
+      Implement Functionality:
+- [ ] Write a utility function to generate random hex colors.
+      Handle state updates in App.
+      Style Components:
+- [ ] Use CSS or Styled Components to match the design.
+      Test Functionality:
+- [ ] Verify that clicking the button updates the color.
+      Ensure the displayed hex code matches the background color.
+      Finalize and Deploy:
+- [ ] Test responsiveness and accessibility.
+- [ ] Deploy using a platform like Vercel or Netlify.
+
 Our suggestions for breaking down the task into TODOs:
 
 - If you need a reminder of how we did this last week, watch the video showing breaking down tasks
