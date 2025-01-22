@@ -1,52 +1,26 @@
 import './App.css';
+import randomColor from 'randomcolor'; // Import the randomcolor library
 import React, { useState } from 'react';
 
-// Utility function to generate a random color
-const generateRandomColor = () => {
-  const letters = '0123456789ABCDEF';
-  let color = '#';
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color.toUpperCase(); // Ensure the generated color is always uppercase
-};
-
-// GenerateButton Component
-const GenerateButton = ({ onClick }) => {
-  return (
-    <button className="generate-button" onClick={onClick}>
-      Generate
-    </button>
-  );
-};
-
-// ColorDisplay Component
-const ColorDisplay = ({ color }) => {
-  return (
-    <div
-      className="color-display"
-      style={{ backgroundColor: color }}
-      aria-label={`Generated color: ${color}`} // Accessibility improvement
-    >
-      Generated Color: {color}
-    </div>
-  );
-};
-
-// App Component
 const App = () => {
+  // Initialize state with a default color (e.g., white)
   const [currentColor, setCurrentColor] = useState('#FFFFFF');
 
+  // Function to handle color generation
   const handleGenerateColor = () => {
-    const newColor = generateRandomColor(); // Generate a new color in uppercase
-    setCurrentColor(newColor); // Update the state with the normalized color
+    const newColor = randomColor(); // Generate a random color
+    setCurrentColor(newColor.toUpperCase()); // Ensure the color is always uppercase
   };
 
   return (
     <div className="app">
       <h1>Random Color Generator</h1>
-      <GenerateButton onClick={handleGenerateColor} />
-      <ColorDisplay color={currentColor} />
+      <button className="generate-button" onClick={handleGenerateColor}>
+        Generate
+      </button>
+      <div className="color-display" style={{ backgroundColor: currentColor }}>
+        Generated Color: {currentColor} {/* Display the color in uppercase */}
+      </div>
     </div>
   );
 };
