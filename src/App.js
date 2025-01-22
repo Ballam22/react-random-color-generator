@@ -15,11 +15,13 @@ const App = () => {
   return (
     <div className="app">
       <h1>Random Color Generator</h1>
+      {/* The button with exact text 'Generate' */}
       <button className="generate-button" onClick={handleGenerateColor}>
         Generate
       </button>
+      {/* Color display with background color matching the hex code */}
       <div className="color-display" style={{ backgroundColor: currentColor }}>
-        Generated Color: {currentColor} {/* Display the color in uppercase */}
+        Generated Color: {currentColor} {/* Display hex code */}
       </div>
     </div>
   );
