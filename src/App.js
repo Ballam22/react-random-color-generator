@@ -8,7 +8,7 @@ const generateRandomColor = () => {
   for (let i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
-  return color.toUpperCase();
+  return color.toUpperCase(); // Ensure the generated color is always uppercase
 };
 
 // GenerateButton Component
@@ -23,7 +23,11 @@ const GenerateButton = ({ onClick }) => {
 // ColorDisplay Component
 const ColorDisplay = ({ color }) => {
   return (
-    <div className="color-display" style={{ backgroundColor: color }}>
+    <div
+      className="color-display"
+      style={{ backgroundColor: color }}
+      aria-label={`Generated color: ${color}`} // Accessibility improvement
+    >
       Generated Color: {color}
     </div>
   );
@@ -34,8 +38,8 @@ const App = () => {
   const [currentColor, setCurrentColor] = useState('#FFFFFF');
 
   const handleGenerateColor = () => {
-    const newColor = generateRandomColor().toUpperCase();
-    setCurrentColor(newColor);
+    const newColor = generateRandomColor(); // Generate a new color in uppercase
+    setCurrentColor(newColor); // Update the state with the normalized color
   };
 
   return (
