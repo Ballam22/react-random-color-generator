@@ -21,7 +21,10 @@ const App = () => {
         Generate
       </button>
       {/* Color display with background color matching the hex code */}
-      <div className="color-display" style={{ backgroundColor: currentColor }}>
+      <div
+        className="color-display"
+        style={{ backgroundColor: currentColor }} // background color is now uppercase
+      >
         Generated Color: {currentColor} {/* Display hex code */}
       </div>
     </div>
