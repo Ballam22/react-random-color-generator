@@ -26,6 +26,7 @@ const App = () => {
         className={`color-display ${textClass}`}
         style={{
           backgroundColor: currentColor,
+          color: currentColor === '#FFFFFF' ? 'black' : 'white',
         }}
         aria-label={`generated color: ${currentColor}`}
       >
