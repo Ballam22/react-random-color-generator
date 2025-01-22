@@ -1,49 +1,79 @@
-/* General reset and styling */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
+/* App container styling */
+.app {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f9; /* Light background color */
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  text-align: center;
 }
 
+/* Heading styling */
 h1 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #333;
+  color: #333; /* Dark text color */
 }
 
 /* Button styling */
-button {
+.generate-button {
   padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4caf50;
-  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff; /* White text color */
+  background-color: #007bff; /* Blue background color */
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
-button:hover {
-  background-color: #45a049;
+.generate-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
-/* Color display styling */
-div.color-display {
-  background-color: #ffffff; /* Default white background */
-  padding: 20px;
-  color: #ffffff; /* Default white text */
-  margin: 70px auto;
+.generate-button:active {
+  background-color: #003f7f; /* Even darker blue on click */
+  transform: scale(0.98); /* Slight shrink effect on click */
+}
+
+/* Color display box styling */
+.color-display {
   margin-top: 20px;
-  border-radius: 8px;
-  font-size: 18px;
-  width: 50%;
-  max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 50px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff; /* Text color for better contrast */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for the display */
+  min-width: 300px;
+  text-align: center;
+  word-wrap: break-word; /* Prevent long text from overflowing */
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+.color-display:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Accessibility improvement for focus outlines */
+button:focus,
+.generate-button:focus {
+  outline: 3px solid #ffa500; /* Highlight outline on focus */
+  outline-offset: 2px;
+}
+
+.color-display:focus {
+  outline: 3px solid #ffa500;
+  outline-offset: 4px;
 }
