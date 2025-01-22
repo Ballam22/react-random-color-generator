@@ -9,7 +9,7 @@ const App = () => {
   // Function to handle color generation
   const handleGenerateColor = () => {
     const newColor = randomColor(); // Generate a random color
-    const uppercaseColor = newColor.toUpperCase(); // Convert to uppercase
+    const uppercaseColor = newColor.toUpperCase(); // Convert to uppercase to ensure consistency
     setCurrentColor(uppercaseColor); // Update state with uppercase color
   };
 
