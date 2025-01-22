@@ -16,37 +16,29 @@ h1 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: #333;
-  font-weight: bold;
 }
 
 /* Button styling */
 button {
-  padding: 12px 24px;
-  font-size: 18px;
+  padding: 10px 20px;
+  font-size: 16px;
   background-color: #4caf50;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
-  transition:
-    background-color 0.3s ease,
-    transform 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #45a049;
-  transform: scale(1.05);
-}
-
-button:active {
-  transform: scale(1);
 }
 
 /* Color display styling */
 div.color-display {
   background-color: #ffffff; /* Default white background */
   padding: 20px;
-  color: #ffffff; /* Default white text */
+  color: #000; /* Default black text */
   margin: 20px auto;
   border-radius: 8px;
   font-size: 18px;
@@ -59,15 +51,11 @@ div.color-display {
     background-color 0.3s ease;
 }
 
-/* Text color for better contrast on dark background colors */
-div.color-display span {
-  color: #000; /* Default text color */
-}
-
+/* Text color for different backgrounds */
 div.color-display.white-text {
-  color: #000; /* Text color for lighter backgrounds */
+  color: black; /* Text for light backgrounds */
 }
 
 div.color-display.dark-text {
-  color: #fff; /* Text color for darker backgrounds */
+  color: white; /* Text for dark backgrounds */
 }
