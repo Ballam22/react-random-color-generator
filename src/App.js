@@ -1,18 +1,15 @@
 import './App.css';
-import randomColor from 'randomcolor'; // Import the randomcolor library
-import React, { useState } from 'react';
+import randomColor from 'randomcolor';
+import { useState } from 'react';
 
 const App = () => {
-  // Initialize state with a default color (e.g., white)
   const [currentColor, setCurrentColor] = useState('#FFFFFF');
 
-  // Function to handle color generation
   const handleGenerateColor = () => {
-    const newColor = randomColor(); // Generate a random color
-    const uppercaseColor = newColor.toUpperCase(); // Convert to uppercase to ensure consistency
-
-    // Set both the background and the text color as uppercase
-    setCurrentColor(uppercaseColor); // Update state with uppercase color
+    const newColor = randomColor();
+    const uppercaseColor = newColor.toUpperCase();
+    console.log('Generated color:', newColor);
+    setCurrentColor(uppercaseColor);
   };
 
   return (
@@ -26,11 +23,11 @@ const App = () => {
       <div
         className="color-display"
         style={{
-          backgroundColor: currentColor, // Apply background color (in uppercase)
-          color: '#ffffff', // Optional: To make the hex text more visible (adjustable as needed)
+          backgroundColor: currentColor,
         }}
+        aria-label={`generated color: ${currentColor}`}
       >
-        Generated Color: {currentColor} {/* Display hex code */}
+        Generated color: {currentColor} {/* Display hex code */}
       </div>
     </div>
   );
