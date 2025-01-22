@@ -22,6 +22,7 @@ const App = () => {
       </button>
       {/* Color display with background color matching the hex code */}
       <div
+        key={`color-${currentColor}`}
         className={`color-display ${textClass}`}
         style={{
           backgroundColor: currentColor,
@@ -30,6 +31,16 @@ const App = () => {
       >
         Generated color: {currentColor} {/* Display hex code */}
       </div>
+      <style>
+        {`
+            .white-text {
+              color: black;
+            }
+            .dark-text {
+              color: white;
+            }
+          `}
+      </style>
     </div>
   );
 };
