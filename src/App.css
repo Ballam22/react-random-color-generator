@@ -1,31 +1,49 @@
-.app {
+/* General reset and styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   text-align: center;
-  font-family: Arial, sans-serif;
-  margin: 20px;
 }
 
-.generate-button {
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Button styling */
+button {
   padding: 10px 20px;
   font-size: 16px;
-  cursor: pointer;
-  margin-top: 10px;
-  background-color: #007bff;
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.generate-button:hover {
-  background-color: #0056b3;
+button:hover {
+  background-color: #45a049;
 }
 
-.color-display {
-  margin: 20px auto;
+/* Color display styling */
+div.color-display {
+  background-color: #ffffff; /* Default white background */
   padding: 20px;
-  border: 1px solid #000;
+  color: #ffffff; /* Default white text */
+  margin: 70px auto;
+  margin-top: 20px;
   border-radius: 8px;
   font-size: 18px;
-  color: #fff;
-  width: 300px;
-  text-align: center;
+  width: 50%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
