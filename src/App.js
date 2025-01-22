@@ -10,6 +10,8 @@ const App = () => {
   const handleGenerateColor = () => {
     const newColor = randomColor(); // Generate a random color
     const uppercaseColor = newColor.toUpperCase(); // Convert to uppercase to ensure consistency
+
+    // Set both the background and the text color as uppercase
     setCurrentColor(uppercaseColor); // Update state with uppercase color
   };
 
@@ -23,7 +25,10 @@ const App = () => {
       {/* Color display with background color matching the hex code */}
       <div
         className="color-display"
-        style={{ backgroundColor: currentColor }} // background color is now uppercase
+        style={{
+          backgroundColor: currentColor, // Apply background color (in uppercase)
+          color: '#ffffff', // Optional: To make the hex text more visible (adjustable as needed)
+        }}
       >
         Generated Color: {currentColor} {/* Display hex code */}
       </div>
