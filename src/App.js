@@ -34,7 +34,7 @@ const App = () => {
   const [currentColor, setCurrentColor] = useState('#FFFFFF');
 
   const handleGenerateColor = () => {
-    const newColor = generateRandomColor();
+    const newColor = generateRandomColor().toUpperCase();
     setCurrentColor(newColor);
   };
 
