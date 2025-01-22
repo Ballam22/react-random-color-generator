@@ -6,28 +6,27 @@ const App = () => {
   const [currentColor, setCurrentColor] = useState('#FFFFFF');
 
   const handleGenerateColor = () => {
-    const newColor = randomColor();
+    const newColor = randomColor(); // Generate a random color
     const uppercaseColor = newColor.toUpperCase();
-    console.log('Generated color:', newColor);
-    setCurrentColor(uppercaseColor);
+    console.log('Generated color:', newColor); // Convert to uppercase
+    setCurrentColor(uppercaseColor); // Update state with the uppercase hex code
   };
 
   return (
     <div className="app">
       <h1>Random Color Generator</h1>
-      {/* The button with exact text 'Generate' */}
+      {/* Button with the exact text "Generate" */}
       <button className="generate-button" onClick={handleGenerateColor}>
         Generate
       </button>
-      {/* Color display with background color matching the hex code */}
+      {/* Div displaying the generated color with matching background */}
       <div
         className="color-display"
         style={{
           backgroundColor: currentColor,
         }}
-        aria-label={`generated color: ${currentColor}`}
       >
-        Generated color: {currentColor} {/* Display hex code */}
+        Generated Color: {currentColor}
       </div>
     </div>
   );
