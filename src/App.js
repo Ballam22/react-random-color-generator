@@ -11,6 +11,7 @@ const App = () => {
     console.log('Generated color:', newColor);
     setCurrentColor(uppercaseColor);
   };
+  const textClass = currentColor === '#FFFFFF' ? 'white-text' : 'dark-text';
 
   return (
     <div className="app">
@@ -21,13 +22,9 @@ const App = () => {
       </button>
       {/* Color display with background color matching the hex code */}
       <div
-        className="color-display"
+        className={`color-display ${textClass}`}
         style={{
           backgroundColor: currentColor,
-          color: currentColor === '#FFFFFF' ? '#000' : '#FFF',
-          padding: '10px',
-          textAlign: 'center',
-          border: '1px solid #000',
         }}
         aria-label={`generated color: ${currentColor}`}
       >
